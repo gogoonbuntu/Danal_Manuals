@@ -39,18 +39,14 @@ CP 인증서버| trans.teledit.com | 31000
 |BillCancel.*|결제 취소 요청 페이지|
 
 ## function 페이지
-1. 역할 : 휴대폰결제 서비스에 필요한 각종 Function 정의
-2. 수정사항
-> ID : 다날에서 제공해드린 CPID   
-> PWD : 다날에서 제공해드린 PWD   
-> AMOUNT : 결제 금액
+* 역할 : 휴대폰결제 서비스에 필요한 각종 Function 정의
 
 ## Ready 페이지
-1. 역할 : CP인증 (A단계)
-2. 설명 : CP정보(ID, PWD) 및 상품정보(ItemAmt, ItemName, ItemCode 등)을 서버로 전송 후 결제창을 호출함.
+* 역할 : CP인증 (A단계)
+* 설명 : CP정보(ID, PWD) 및 상품정보(ItemAmt, ItemName, ItemCode 등)을 서버로 전송 후 결제창을 호출함.
   1. "다날 인증서버"와 통신하여 가맹점 인증을 받는다.
   2. 인증 성공시, "다날 웹서버"로 FORM 태그를 HTTP POST방식으로 전송하여 결제창을 호출한다.
-### 인증 단계 파라미터
+### 1. 인증 단계 파라미터
 #### INPUT
 |Field|필수여부|Max(Byte)|비고(예제)|
 |---|---|---|---|
@@ -70,7 +66,7 @@ Result|필수|4|결과코드
 ErrMsg|필수|256|결과메시지
 ServerInfo|필수|128|거래인증 key(거래세션)
 
-### 결제창 호출 단계 파라미터
+### 2. 결제창 호출 단계 파라미터
 #### INPUT (CP WEB SERVER → DANAL WEB SERVER)
 Field|필수여부|Max(Byte)|비고(예제)
 ---|---|---|---
@@ -89,6 +85,7 @@ BgColor | 선택사항 | 결제화면 Color 설정시 사용 00:블루, 01:남�
 Email | 선택사항 | 사용자 E-mail주소 = 결제화면에 표기
 ByPassValue | 선택사항 | CPCGI 페이지로 전달될 데이터
 UseAuthKey | 선택사항 | 사용자 인증 키 전달 여부 <br> 'Y' 전달 시 사용자 인증 완료 시 전달
+
 #### OUTPUT (DANAL WEB SERVER → CP WEB SERVER)
 Field|필수여부|Max(Byte)|비고(예제)
 ---|---|---|---
