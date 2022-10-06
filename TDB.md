@@ -48,14 +48,14 @@ CP 인증서버| trans.teledit.com | 31000
   2. 인증 성공시, "다날 웹서버"로 FORM 태그를 HTTP POST방식으로 전송하여 결제창을 호출한다.
 ### 1. 인증 단계 파라미터
 #### INPUT
-|Field|필수여부|Max(Byte)|비고(예제)|
-|---|---|---|---|
+|Field|필수여부|Max(Byte)|비고(예제)
+|---|---|---|---
 |CP 정보|||
-|ID|필수|10|CP ID|
-|PWD|필수|10|CP PWD|
-|SUBCP|선택사항| |Sub CPID (사용하는 경우만)|
-|사용자 정보||||
-|USERID|선택사항|60|고객 ID|
+|ID|필수|10|CP ID
+|PWD|필수|10|CP PWD
+|SUBCP|선택사항| |Sub CPID (사용하는 경우만)
+|사용자 정보|||
+|USERID|선택사항|60|고객 ID
 |상품 정보|||
 |ItemCount|필수|-|고정값
 
