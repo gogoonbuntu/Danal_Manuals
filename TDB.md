@@ -41,7 +41,7 @@ CP 인증서버| trans.teledit.com | 31000
 ## function 페이지
 * 역할 : 휴대폰결제 서비스에 필요한 각종 Function 정의
 
-## Ready 페이지
+## I. Ready 페이지 - 가맹점 인증
 * 역할 : CP인증 (A단계)
 * 설명 : CP정보(ID, PWD) 및 상품정보(ItemAmt, ItemName, ItemCode 등)을 서버로 전송 후 결제창을 호출함.
   1. "다날 인증서버"와 통신하여 가맹점 인증을 받는다.
@@ -117,7 +117,8 @@ ByPassValue | 조건부 | CPCGI 페이지로 전달될 데이터 (있을 시)
 AUTHKEY | 조건부 | 사용자 인증 키(UseAuthKey로 요청 시)
 - 개인정보 정책에 의해 인증번호, 통신사정보, 잔여한도금액은 전달할 수 없습니다.
 
-## CPCGI 페이지
+
+## II. CPCGI 페이지 - 결제건 검증, 결제
 * 역할 : 결제정보 검증 단계, 결제 단계 ( D, E 단계 )
 * 설명 : Order ID 또는 결제금액 등 결제 거래내용에 대한 검증 단계, 그 다음 결제 요청을 보낸다.
 
@@ -146,6 +147,8 @@ TID | 조건부 | 거래번호 ( 년간 Unique ) <br> IFVERSION = V1.1.2 이상�
 \* Parameter값 실제 전송형태 예제
 > "ServerInfo=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;Command=NCONFIRM;OUTPUTOPTION=Default"
 
+
+
 #### INPUT ( NBILL, 결제 단계 )
 Field|필수여부|Max(Byte)|비고(예제)
 ---|---|---|---
@@ -166,11 +169,15 @@ DNTID | 조건부 | 22 | 거래 번호 (YYYY + TID)
 Authkey | 조건부 | 20 | 2회차 이상 결제 혹은 자동결제 등 상황에 사용되는 <br> 사용자 인증 키 (20150701... 같이 연도로 시작)
 ORDERID | 조건부 | 200 | 요청시 보낸 가맹점 주문번호 (IFVERSION = V1.1.2 이상인 경우)
 
+
+
 ### CP 주의 사항
 * NBILL 이 성공적으로 수행된 이후 (Result=0), 이용자에게 서비스를 제공한다.
 * 결제건의 대사, 취소를 위하여 TID(18byte) 를 저장한다.
 * 결제서버로 부터 받은 응답 결과에 대해 성공, 실패 여부 체크 및 데이터 저장을 위한 파싱 과정에서 공백 처리 및 대소문자 구분에 유의한다.
  * 다날에서 제공하는 function.* 파일 속 String -> Array 파싱 함수를 참조하여 사용하는 것을 권장하며, Key=Value 형식으로 구분자로 파싱하여 사용하도록 한다.
+
+
 
 ## 거래 취소 (BILL_CANCEL)
 ### 취소 방법
@@ -194,6 +201,8 @@ ErrMsg | 무조건 | 255 | 결과 메시지 (성공 시 No Information)
 DATE | 무조건 | 14 | 결제 완료 시간
 TID | 무조건 | 18 | 거래 번호 (년간 고유)
 
+
+---------------------------
 ## 그 외 참고사항
 
 #### Java 연동 시
