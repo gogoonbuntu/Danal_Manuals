@@ -69,7 +69,7 @@ ServerInfo|필수|128|거래인증 key(거래세션)
 ### 2. 결제창 호출 단계 파라미터
 #### INPUT (CP WEB SERVER → DANAL WEB SERVER)
 Field|필수여부|비고(예제)
----|---|---|---
+---|---|---
 ServerInfo | 필수 | 다날 인증서버에서 받은 거래 키(128 byte )
 CPName | 필수 | 결제화면에 표시되는 **가맹점 이름**
 ItemName | 필수 | 결제화면에 표시되는 **상품 이름**
@@ -91,6 +91,8 @@ UseAuthKey | 선택사항 | 사용자 인증 키 전달 여부 <br> 'Y' 전달 �
 > - PORT : 443
 > - Method : POST
 > - CHARACTER SET : EUC-KR
+
+
 Field|반환조건|비고(예제)
 ---|---|---
 ServerInfo | 무조건 | 다날 인증서버에서 받은 거래 키(128 byte)
