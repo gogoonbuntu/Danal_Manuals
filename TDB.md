@@ -2,7 +2,7 @@ Danal 휴대폰결제 연동 가이드
 =========================
 
 # 사전 준비사항
-### 방화벽 설정 : Outbound 방화벽 사용하는 CP일 경우
+### * 방화벽 설정 : Outbound 방화벽 사용하는 CP일 경우
 서버|IP|PORT
 ---|---|---
 CP 인증서버| trans.teledit.com | 31000
@@ -10,10 +10,9 @@ CP 인증서버| trans.teledit.com | 31000
 취소서버| trans.teledit.com | 13003 
 웹 서버| ui.teledit.com | 443 
 
-### PHP 용 연동모듈 (gcc 필요)
-### JSP 용 연동모듈
-### ASP/NET 용 연동모듈
-<br>
+### * 연동모듈 (PHP/JSP/JS/PYTHON/ASP/NET)
+* PHP, JS, PYTHON 은 gcc 가 필요함
+------------------------------
 
 # 연동 순서
 1. 연동모듈 설치
