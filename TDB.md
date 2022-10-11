@@ -24,6 +24,7 @@ CP 인증서버| trans.teledit.com | 31000
 
 # 서비스 연동 플로우
 총 5단계로 진행되며, B와 C 단계는 다날 웹서버 (다날 표준 결제창)을 사용하여 연동하게 된다.
+<br>
 ![image](https://user-images.githubusercontent.com/34636395/194971461-ad8eb0b6-537d-49ed-b9e9-a554ddb40b75.png)
 
 
