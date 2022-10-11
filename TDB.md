@@ -42,7 +42,7 @@ CP 인증서버| trans.teledit.com | 31000
 |Success.*|결제 성공화면(UI) 페이지|
 |BillCancel.*|결제 취소 요청 페이지|
 
-## function 페이지
+## 0. function 페이지
 * 역할 : 휴대폰결제 서비스에 필요한 각종 Function 정의
 
 ## I. Ready 페이지 - 가맹점 인증
