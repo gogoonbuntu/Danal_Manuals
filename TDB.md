@@ -12,7 +12,8 @@ CP 인증서버| trans.teledit.com | 31000
 
 ### * 연동모듈 (PHP/JSP/JS/PYTHON/ASP/NET)
 * PHP, JS, PYTHON 은 gcc 가 필요함
-------------------------------
+---
+
 
 # 연동 순서
 1. 연동모듈 설치
@@ -26,6 +27,7 @@ CP 인증서버| trans.teledit.com | 31000
 [diagram]
 
 <br>
+---
 
 # 각 페이지 설명
 |파일|설명|
